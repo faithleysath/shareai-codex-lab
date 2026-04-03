@@ -1,0 +1,21 @@
+{
+  "name": "s02-read-file",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "description": "ShareAI tutorial lesson s02 scaffold",
+  "scripts": {
+    "dev": "bun --watch run index.ts",
+    "start": "bun run index.ts",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "openai": "^6.33.0"
+  }
+}

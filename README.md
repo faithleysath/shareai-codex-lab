@@ -24,12 +24,19 @@ shareai-codex-lab/
       tsconfig.json
       bun.lock
       index.ts
+    s02-read-file/
+      README.md
+      package.json
+      tsconfig.json
+      bun.lock
+      index.ts
 ```
 
 ## 当前进度
 
 - `lessons/s01-agent-loop/` 已经作为第一节课的起始子项目创建好。
-- 目前它还是一个最小 Bun 启动骨架，后面我们会在这里继续实现教程 `s01` 里的 agent loop。
+- `lessons/s01-agent-loop/` 现在是“安全列目录”的 agent loop 示例。
+- `lessons/s02-read-file/` 现在是“列目录 + 读文件 + dispatch map”的第二节课示例。
 - 暂时不预创建后续章节目录，需要做到哪一节再补哪一节。
 
 ## LLM 环境变量
