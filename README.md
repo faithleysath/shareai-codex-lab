@@ -42,6 +42,12 @@ shareai-codex-lab/
       tsconfig.json
       bun.lock
       index.ts
+    s05-skills/
+      README.md
+      package.json
+      tsconfig.json
+      bun.lock
+      index.ts
 ```
 
 ## 当前进度
@@ -51,6 +57,7 @@ shareai-codex-lab/
 - `lessons/s02-read-file/` 现在是“列目录 + 读文件 + dispatch map”的第二节课示例。
 - `lessons/s03-todo/` 现在是“todo_write + nag reminder + 多步调查任务”的第三节课示例。
 - `lessons/s04-subagent/` 现在是“task 工具 + fresh-context child agent + 摘要回流”的第四节课示例。
+- `lessons/s05-skills/` 现在是“skill 索引 + load_skill 工具 + 按需知识注入”的第五节课示例。
 - 暂时不预创建后续章节目录，需要做到哪一节再补哪一节。
 
 ## LLM 环境变量
