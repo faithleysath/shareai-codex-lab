@@ -1,35 +1,78 @@
 # shareai-codex-lab
 
-这是一个用 `Bun` 初始化的 TypeScript 练习仓库，后面我们可以跟着
-[ShareAI 的教程](https://learn.shareai.run/zh/) 一步步往里补代码。
+这是一个跟着 [ShareAI 教程](https://learn.shareai.run/zh/) 学习的实验仓库。
 
-## 常用命令
+从现在开始，这个仓库采用“每一节课一个独立子项目”的方式组织，避免不同章节之间互相干扰。
 
-安装依赖：
+## 仓库约定
 
-```bash
-bun install
+1. 每一节课都放在 `lessons/` 目录下。
+2. 每一节课都是一个独立的 Bun/TypeScript 子项目，默认互不共享代码和依赖。
+3. 目录名尽量和教程章节保持一致，推荐格式为 `s01-agent-loop`、`s02-...`。
+4. 根目录主要放总说明、学习记录和协作约定，不默认作为可运行项目。
+5. 即使不同章节会重复 `package.json`、`tsconfig.json`、`bun.lock`，也优先保留独立性，先保证学习过程清晰。
+
+## 当前目录结构
+
+```text
+shareai-codex-lab/
+  README.md
+  lessons/
+    s01-agent-loop/
+      README.md
+      package.json
+      tsconfig.json
+      bun.lock
+      index.ts
 ```
 
-运行一次入口文件：
+## 当前进度
+
+- `lessons/s01-agent-loop/` 已经作为第一节课的起始子项目创建好。
+- 目前它还是一个最小 Bun 启动骨架，后面我们会在这里继续实现教程 `s01` 里的 agent loop。
+- 暂时不预创建后续章节目录，需要做到哪一节再补哪一节。
+
+## LLM 环境变量
+
+仓库统一使用 OpenAI 兼容接口的三变量约定：
+
+- `OPENAI_API_KEY`
+- `OPENAI_BASE_URL`
+- `OPENAI_MODEL`
+
+模板见 [`.env.example`](/Users/laysath/proj/shareai-codex-lab/.env.example)。
+
+因为每一节课都是独立子项目，实际运行时请把模板复制到对应 lesson 目录并命名为 `.env`，例如：
 
 ```bash
+cp .env.example lessons/s01-agent-loop/.env
+```
+
+## 运行第一节课
+
+```bash
+cd lessons/s01-agent-loop
+bun install
 bun run start
 ```
 
-监听文件变化并自动重跑：
+开发模式：
 
 ```bash
+cd lessons/s01-agent-loop
 bun run dev
 ```
 
-## 当前结构
+## 后续使用方式
 
-- `index.ts`：当前示例入口
-- `package.json`：项目配置与脚本
-- `tsconfig.json`：TypeScript 配置
+当你开始下一节课时，我们再新建对应目录，例如：
 
-## 说明
+- `lessons/s02-.../`
+- `lessons/s03-.../`
 
-你可以把这里当成我们后续实验 `codex` / 本地代理概念的练习场。
-你不需要自己写 TypeScript，后面只要告诉我想实现哪一步，我来帮你写。
+到时候可以根据需要：
+
+- 从零新建一个最小 Bun 项目
+- 复制上一节的成果作为新一节的起点
+
+默认原则是：先让每一节的边界足够清楚，再考虑抽公共代码。

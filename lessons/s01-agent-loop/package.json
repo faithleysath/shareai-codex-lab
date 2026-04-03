@@ -1,8 +1,9 @@
 {
-  "name": "shareai-codex-lab",
+  "name": "s01-agent-loop",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "description": "ShareAI tutorial lesson s01 scaffold",
   "scripts": {
     "dev": "bun --watch run index.ts",
     "start": "bun run index.ts"
