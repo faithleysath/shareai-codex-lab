@@ -30,6 +30,18 @@ shareai-codex-lab/
       tsconfig.json
       bun.lock
       index.ts
+    s03-todo/
+      README.md
+      package.json
+      tsconfig.json
+      bun.lock
+      index.ts
+    s04-subagent/
+      README.md
+      package.json
+      tsconfig.json
+      bun.lock
+      index.ts
 ```
 
 ## 当前进度
@@ -37,6 +49,8 @@ shareai-codex-lab/
 - `lessons/s01-agent-loop/` 已经作为第一节课的起始子项目创建好。
 - `lessons/s01-agent-loop/` 现在是“安全列目录”的 agent loop 示例。
 - `lessons/s02-read-file/` 现在是“列目录 + 读文件 + dispatch map”的第二节课示例。
+- `lessons/s03-todo/` 现在是“todo_write + nag reminder + 多步调查任务”的第三节课示例。
+- `lessons/s04-subagent/` 现在是“task 工具 + fresh-context child agent + 摘要回流”的第四节课示例。
 - 暂时不预创建后续章节目录，需要做到哪一节再补哪一节。
 
 ## LLM 环境变量
